@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Express - Otimizador de Rotas</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^0.14.0"
+        }
+      }
+    </script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="index.tsx" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Sabor Express</h1>
+        <p>Otimizador de Rotas com IA</p>
+    </header>
+    <main>
+        <div class="panel" id="input-panel">
+            <form id="route-form">
+                <div class="form-header">
+                    <h2>Configuração da Entrega</h2>
+                    <button type="button" id="load-plan-btn" class="secondary-btn">Carregar Último Plano</button>
+                </div>
+                <div class="form-group">
+                    <label for="hq-address">Endereço da Sede</label>
+                    <input type="text" id="hq-address" name="hq-address" required placeholder="Ex: Av. Paulista, 1000, São Paulo">
+                </div>
+                <div class="form-group">
+                    <label for="delivery-addresses">Endereços de Entrega (um por linha)</label>
+                    <textarea id="delivery-addresses" name="delivery-addresses" rows="10" required placeholder="R. Augusta, 500, São Paulo&#10;Pça. da Sé, 1, São Paulo&#10;..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="driver-count">Número de Entregadores</label>
+                    <input type="number" id="driver-count" name="driver-count" min="1" value="1" required>
+                </div>
+                 <div class="form-group">
+                    <label for="stop-duration">Duração da Parada (minutos)</label>
+                    <input type="number" id="stop-duration" name="stop-duration" min="0" value="5" required>
+                </div>
+                <div class="form-group">
+                    <label for="traffic-condition">Condições de Trânsito</label>
+                    <select id="traffic-condition" name="traffic-condition">
+                        <option value="trânsito urbano típico em horários de pico (almoço/jantar)" selected>Pico (Almoço/Jantar)</option>
+                        <option value="trânsito leve">Leve</option>
+                        <option value="trânsito pesado e possíveis congestionamentos">Pesado (Hora do Rush)</option>
+                        <option value="condições atuais de trânsito em tempo real com base no seu conhecimento mais recente">Tempo Real (Estimativa da IA)</option>
+                    </select>
+                </div>
+                <button type="submit" id="optimize-btn">
+                    <span class="btn-text">Otimizar Rotas</span>
+                    <span class="spinner" hidden></span>
+                </button>
+            </form>
+        </div>
+        <div class="panel" id="output-panel" aria-live="polite">
+            <div id="results-placeholder">
+                <img src="https://www.gstatic.com/images/icons/material/system/2x/route_black_48dp.png" alt="Ícone de rota" class="placeholder-icon">
+                <h3>As rotas otimizadas aparecerão aqui</h3>
+                <p>Preencha os dados ao lado e clique em "Otimizar Rotas" para começar.</p>
+            </div>
+            <div id="results-wrapper" class="hidden">
+                <div class="results-header">
+                    <label for="route-selector">Exibir Rota:</label>
+                    <select id="route-selector"></select>
+                    <button type="button" id="save-plan-btn" class="secondary-btn" hidden>Salvar Plano</button>
+                </div>
+                <div id="map"></div>
+                <div id="chart-container">
+                    <canvas id="time-chart"></canvas>
+                </div>
+                <div id="selected-route-details" class="hidden"></div>
+                <div id="results-container"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
