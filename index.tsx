@@ -318,13 +318,37 @@ function renderTimeChart(routes: Route[]) {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            onHover: (event: any, chartElement: any) => {
+                const canvas = event.native?.target as HTMLCanvasElement;
+                if (canvas) {
+                     canvas.style.cursor = chartElement[0] ? 'pointer' : 'default';
+                }
+            },
+            onClick: (event: any) => {
+                const points = timeChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+
+                if (points.length) {
+                    const firstPoint = points[0];
+                    const index = firstPoint.index;
+                    const selectedRoute = routes[index];
+
+                    if (selectedRoute) {
+                        // Update the dropdown selector
+                        routeSelector.value = String(selectedRoute.driverId);
+                        
+                        // Manually trigger the change event to update map and details
+                        const changeEvent = new Event('change', { bubbles: true });
+                        routeSelector.dispatchEvent(changeEvent);
+                    }
+                }
+            },
             plugins: {
                 legend: {
                     display: false
                 },
                 title: {
                     display: true,
-                    text: 'Tempo Estimado por Entregador',
+                    text: 'Tempo Estimado por Entregador (clique para selecionar)',
                     font: {
                         size: 16
                     },
