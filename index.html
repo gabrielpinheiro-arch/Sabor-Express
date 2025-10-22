@@ -36,11 +36,13 @@
                 </div>
                 <div class="form-group">
                     <label for="hq-address">Endereço da Sede</label>
-                    <input type="text" id="hq-address" name="hq-address" required placeholder="Ex: Av. Paulista, 1000, São Paulo">
+                    <input type="text" id="hq-address" name="hq-address" required placeholder="Rua, Número, Bairro, Cidade, Estado">
+                    <p class="form-hint">Forneça o endereço mais completo possível para melhores resultados.</p>
                 </div>
                 <div class="form-group">
                     <label for="delivery-addresses">Endereços de Entrega (um por linha)</label>
-                    <textarea id="delivery-addresses" name="delivery-addresses" rows="10" required placeholder="R. Augusta, 500, São Paulo&#10;Pça. da Sé, 1, São Paulo&#10;..."></textarea>
+                    <textarea id="delivery-addresses" name="delivery-addresses" rows="10" required placeholder="Rua Exemplo, 123, Bairro, Cidade&#10;Avenida Principal, 456, Centro, Cidade&#10;..."></textarea>
+                    <p class="form-hint">Use o formato "Rua, Número, Bairro, Cidade". Endereços inválidos podem causar erros.</p>
                 </div>
                 <div class="form-group">
                     <label for="driver-count">Número de Entregadores</label>
@@ -56,7 +58,7 @@
                         <option value="trânsito urbano típico em horários de pico (almoço/jantar)" selected>Pico (Almoço/Jantar)</option>
                         <option value="trânsito leve">Leve</option>
                         <option value="trânsito pesado e possíveis congestionamentos">Pesado (Hora do Rush)</option>
-                        <option value="condições atuais de trânsito em tempo real com base no seu conhecimento mais recente">Tempo Real (Estimativa da IA)</option>
+                        <option value="condições atuais de trânsito em tempo real com base no seu conhecimento mais recente">Tempo Real (Estimativa da IA com base em padrões gerais)</option>
                     </select>
                 </div>
                 <button type="submit" id="optimize-btn">

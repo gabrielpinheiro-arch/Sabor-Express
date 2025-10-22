@@ -184,7 +184,7 @@ async function optimizeRoutes() {
     renderResults(result.routes);
   } catch (error) {
     console.error('Erro ao chamar a API Gemini:', error);
-    handleError('Não foi possível otimizar as rotas. A IA pode ter retornado um formato inesperado.');
+    handleError('Falha ao otimizar. Verifique se todos os endereços são válidos e estão em um formato completo (Ex: Rua, Número, Cidade).');
   } finally {
     setLoading(false);
   }
@@ -379,7 +379,7 @@ function renderSelectedRouteDetails(route: Route) {
 
 function renderResults(routes: Route[]) {
     if (!routes || routes.length === 0) {
-        handleError("A IA não retornou nenhuma rota. Tente novamente com endereços diferentes.");
+        handleError("A IA não retornou nenhuma rota. Verifique se os endereços são válidos ou tente novamente com dados diferentes.");
         return;
     }
 
