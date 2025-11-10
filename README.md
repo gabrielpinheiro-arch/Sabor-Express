@@ -48,7 +48,7 @@ Os resultados do desenvolvimento do programa são positivos, pois ajudou a encon
 
 
 # Como usar o aplicativo:
-1. Abra o Google Colab
+1. Baixe o Arquivo e Abra o Google Colab
 2.  Importe as seguintes bibliotecas:
    Numpy
    Pandas
@@ -58,3 +58,6 @@ Os resultados do desenvolvimento do programa são positivos, pois ajudou a encon
    Standard Scaler (do Sklearn)
    deque do collections
    Heapq Usado para a fila de prioridade no A*
+ 3. Adicione primeiro o arquivo "Grafo_Arestas_csv"
+ 4. Por último insira o arquivo "Grafo_Arestas_csv", todos dentro da pasta docs
+ 5. 
