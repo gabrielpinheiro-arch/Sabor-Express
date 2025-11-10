@@ -34,7 +34,7 @@ não supervisionado como K-Means para agrupar entregas em zonas eficientes. Alé
 disso, foi se necessário avaliar e comparar as soluções propostas com métricas adequadas.
 
 # Descrição da abordagem adotada
-Utilizei os programas Google AI Studio e o Gemini para o fornecimento dos prompts necessários, para utilizar os algorítmos de grafos, além de integrar o open street map para a visualização dos mapas além de utilizar uma API com informações em tempo real sobre o trânsito nas ruas de São Paulo, Integrando também uma validação de endereço em tempo real para os campos de endereço da sede e de entrega comm uma API de geocodificação para verificar a validade dos endereços à medida que o usuário digita, fornecendo feedback imediato.
+Utilizei o programa Google Colab para o fornecimento dos prompts necessários, instalando bibliotecas como o Numpy, Pandas e o Networkx para utilizar os algorítmos de grafos, o programa K-Means para a visualização dos mapas.
 
 # Algorítimos Utilizados:
 A*, K-Means
