@@ -39,8 +39,10 @@ Utilizei os programas Google AI Studio e o Gemini para o fornecimento dos prompt
 # Algorítimos Utilizados:
 A*, K-Means
 
-# Modelo usado na solução do problema:
+# Modelos usados na solução do problema:
+Estudo de caso da UPS – ORION
 https://www.wired.com/2013/06/ups-astronomical-math?utm_source=chatgpt.com
+
 
 # Análise dos Resultados
 Os resultados do desenvolvimento do programa são positivos, pois ajudou a encontrar qual é o caminho mais curto a ser utilizado para uma entrega.
