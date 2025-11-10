@@ -40,16 +40,11 @@ Utilizei os programas Google AI Studio e o Gemini para o fornecimento dos prompt
 A*, K-Means
 
 # Modelo usado na solução do problema:
-https://colab.research.google.com/drive/1ZUx1msOMwN9Y037cHnmFfG2oLNmqHQ5-?usp=sharing
+https://www.wired.com/2013/06/ups-astronomical-math?utm_source=chatgpt.com
 
 # Análise dos Resultados
-Os resultados do desenvolvimento do programa são positivos, pois ajudou a encontrar qual é o caminho mais curto a ser utilizado para uma entrega. A limitação encontrada é na hora de fazer o deploy do aplicativo, fazendo a inserção de uma Chave API do Gemini.
+Os resultados do desenvolvimento do programa são positivos, pois ajudou a encontrar qual é o caminho mais curto a ser utilizado para uma entrega.
 
-Visualização do aplicativo:
-https://ai.studio/apps/drive/1TEiUWnGgw7IApQhvkERjqE_SUdTuvbQn
-
-# Prévia:
-<img width="1360" height="768" alt="Captura de Tela (82)" src="https://github.com/user-attachments/assets/5d4ea7c3-a1e1-47f9-ad77-7fa5c3688891" />
 
 
 # Como usar o aplicativo:
