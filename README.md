@@ -48,7 +48,8 @@ Os resultados do desenvolvimento do programa são positivos, pois ajudou a encon
 
 
 # Como usar o aplicativo:
-1. Importe as seguintes bibliotecas:
+1. Abra o Google Colab
+2.  Importe as seguintes bibliotecas:
    Numpy
    Pandas
    Networkx
