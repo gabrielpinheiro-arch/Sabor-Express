@@ -40,7 +40,7 @@ Utilizei os programas Google AI Studio e o Gemini para o fornecimento dos prompt
 A*, K-Means
 
 # Modelo usado na solução do problema:
-Imagem estática do open street map
+https://colab.research.google.com/drive/1ZUx1msOMwN9Y037cHnmFfG2oLNmqHQ5-?usp=sharing
 
 # Análise dos Resultados
 Os resultados do desenvolvimento do programa são positivos, pois ajudou a encontrar qual é o caminho mais curto a ser utilizado para uma entrega. A limitação encontrada é na hora de fazer o deploy do aplicativo, fazendo a inserção de uma Chave API do Gemini.
