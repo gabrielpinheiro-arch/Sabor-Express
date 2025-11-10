@@ -53,8 +53,12 @@ https://ai.studio/apps/drive/1TEiUWnGgw7IApQhvkERjqE_SUdTuvbQn
 
 
 # Como usar o aplicativo:
-1. Digite o endereço da sede com rua, número, bairro, cidade e estado.
-2. Faça a mesma coisa digitando o endereço de entrega, só podendo ser um por linha.
-3. Defina o número de entregadores.
-4. Defina a duração de parada e clique em otimizar rotas.
-5. Pronto! A distância mais próxima do local de entrega é apresentada.
+1. Importe as seguintes bibliotecas:
+   Numpy
+   Pandas
+   Networkx
+   Matplotlib.pyplot
+   KMeans (do Sklearn)
+   Standard Scaler (do Sklearn)
+   deque do collections
+   Heapq Usado para a fila de prioridade no A*
