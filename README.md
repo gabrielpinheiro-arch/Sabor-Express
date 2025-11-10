@@ -60,4 +60,5 @@ Os resultados do desenvolvimento do programa são positivos, pois ajudou a encon
    Heapq Usado para a fila de prioridade no A*
  3. Adicione primeiro o arquivo "Grafo_Arestas_csv"
  4. Por último insira o arquivo "Grafo_Arestas_csv", todos dentro da pasta docs
- 5. 
+ 5. Na parte Simulação dos Pedidos (Pontos de Entrega) Altere os parâmetros do número de pedidos para qualquer número (20,40,45)
+ 6. Execute o comando e veja o resultado
